@@ -1,0 +1,15 @@
+<div id="album-tracks">
+    <div class="track" id="tracks-header">
+      <p>Song</p>
+      <p id="listen-title">Listen</p>
+    </div>
+    <% tracks.forEach(function(track) { %>
+      <div class="track">
+        <p><%= track.name %></p>
+        <audio controls>
+            <source src="<%= track.preview_url %>" type="audio/mpeg">
+          </audio>
+      </div>
+    <% }); %>
+  </div>
+  

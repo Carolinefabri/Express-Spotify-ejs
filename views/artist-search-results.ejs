@@ -1,0 +1,19 @@
+<div class="backgroundImage">
+  <h1>Artist Search Results</h1>
+
+  <% if (results.length > 0) { %>
+    <div id="albums-search-div">
+      <% results.forEach(artist => { %>
+        <div class="album">
+          <h2><%= artist.name %></h2>
+          <% if (artist.images.length > 0) { %>
+            <img class="artist-image" src="<%= artist.images[0].url %>" alt="<%= artist.name %>">
+          <% } %>
+          <a href="/albums/<%= artist.id %>">Show Albums</a>
+        </div>
+      <% }) %>
+    </div>
+  <% } else { %>
+    <p>No artists found.</p>
+  <% } %>
+</div>

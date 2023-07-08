@@ -1,0 +1,12 @@
+<h2 class="albumh">Albums</h2>
+
+<div id="artist-albums-div">
+
+  <% albums.forEach(album => { %>
+    <div class="album-card">
+      <img src="<%= album.images[0].url %>" alt="Album Cover">
+      <h3><%= album.name %></h3>
+      <a href="/tracks/<%= album.id %>" class="btn">View Tracks</a>
+    </div>
+  <% }) %>
+</div>
